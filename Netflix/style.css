@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+}
+
+input {
+    padding: 0px 20px;
+    font-family: sans-serif;
+    color: white;
+    filter: brightness(20);
+    margin: 0px;
+    border: 1px solid white;
+    border-radius: 5px;
+
+}
+
+nav {
+    max-width: 80vw;
+    /*displayed only on 80% of vw..since its flex it comes in center*/
+    display: flex;
+    margin: auto;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+}
+
+a {
+    color: #B3B3B3;
+
+}
+
+.main
+
+/*parent block*/
+    {
+
+    background-image: url(assests/images/background.jpg);
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    /*making it positioned element*/
+    /* object-fit: contain; */
+
+    /* background-position: center center; */
+
+    background-repeat: no-repeat;
+    /*background-size: 100vw;  covers entire vw...auto scales*/
+    background-size: max(1800px, 100vw);
+    /*avoids smaller width..takes max of the two*/
+    background-position: center center;
+}
+
+.main .box
+
+/*used for opacity og bg*/
+    {
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    opacity: 0.69;
+    position: absolute;
+    /*pushes to the nearest positioned element*/
+    top: 0;
+    /*top: 0 ensures that the top edge of .box is aligned with the top edge of .main, covering the background image completely with a semi-transparent overlay.*/
+    /* This ensures that any content inside the nav element will be overlaid by the .box element's semi-transparent background. */
+}
+
+.home {
+    height: calc(100% - 39px);
+    /*if parent height is set then u can use 100%*/
+    color: white;
+    padding: 23px;
+    font-family: 'Martel Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    gap: 20px
+}
+
+.home> :first-child {
+    /* use > for immediate child...lest applied to all */
+    font-size: 48px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.home> :nth-child(2),
+:nth-child(3) {
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.home> :nth-child(3) {
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.btn {
+    height: 50px;
+    width: 210px;
+    background-color: #C11119;
+    color: white;
+    font-size: 24px;
+    font-weight: 500;
+    border: 3px solid transparent;
+    border-radius: 5px;
+    cursor:pointer;
+}
+
+.email {
+    padding: 16px 80px 16px 18px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.525);
+    position: relative;
+    /* opacity: 0.6; */
+}
+
+.home-btn {
+    display: flex;
+    gap: 20px;
+}
+
+.main span:nth-child(2) {
+    margin-top: -36px;
+}
+
+.language {
+    height: 32px;
+    width: 126px;
+    padding: 6px 30px;
+    background-color: rgba(12, 12, 12, 0.5);
+    color: white;
+    border-radius: 5px;
+    appearance: none;
+    cursor: pointer;
+    /*to remove default styles*/
+    /* background-image: url(https://cdn.iconscout.com/icon/premium/png-256-thumb/translate-2872060-2388216.png?f=webp);
+    background-attachment: fixed;
+    background-size: 20px 20px; */
+
+}
+
+.language option {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.rt_btn {
+    display: flex;
+    gap: 8px;
+}
+
+.section1,
+.section2,
+.section3,
+.section4 {
+    margin: auto;
+    max-width: 70vw;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    position: relative;
+}
+
+.text :first-child {
+    font-weight: 900;
+    font-size: 48px;
+}
+
+.text :nth-child(2) {
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.image1 img {
+    width: 30vw;
+    position: relative;
+    z-index: 1;
+}
+
+.image1 video {
+    position: absolute;
+    width: 30vw;
+    top: 2vw;
+    right: 0;
+    z-index: 0;
+}
+
+.section3 video {
+    height: 10vw;
+    width: 30vw;
+    top: 2vw;
+}
+
+.seperation {
+    background-color: #232323;
+    height: 10px;
+}
+
+.section5 {
+    color: white;
+    margin: 10px;
+    margin-top: 30px;
+    font-weight: 900;
+    font-size: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.questions {
+    height: auto;
+    width: 70vw;
+    font-size: 24px;
+    margin: 10px;
+    padding: 24px;
+    background-color: #2b2929;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+}
+
+.questions:hover {
+    background-color: #414141;
+    cursor: pointer;
+}
+
+footer {
+    color: #B3B3B3;
+    max-width: 90vw;
+    padding: 75px 0;
+    margin: auto;
+    padding: 60px;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    color: white;
+}
+
+footer span {
+    padding: 34px 24px;
+    margin-left: 50px;
+}
+
+.footer-item {
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+    align-items: center;
+}
+
+.footer a {
+    font-size: 14px;
+    color: white;
+}
+
+footer .contact {
+    padding: 34px 24px;
+}
+
+/* @media screen and (max-width:1300px){
+    .first{
+        flex-wrap:wrap;
+    }
+    } */
